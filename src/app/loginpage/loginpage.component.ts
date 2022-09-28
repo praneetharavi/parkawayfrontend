@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-loginpage',
@@ -9,20 +10,18 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 export class LoginpageComponent implements OnInit {
 
-  prane : boolean = true;
-  constructor() { }
+  type : string ="password";
+  isText : boolean = false;
+  eyeIcon :string = "fa-eye-slash";
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
-  }
-  public userProfileForm = new FormGroup({
-    first_name: new FormControl(''),
-    last_name: new FormControl(''),
-  });
-  public updateUserProfile(): void {
-    // Logic to update the user will go here, but for now, we'll just log the values
-    console.log(
-      this.userProfileForm.controls.first_name.value,
-      this.userProfileForm.controls.last_name.value,
-    );
+  };
+
+  public hideShowPass(){
+this.isText = !this.isText;
+this.isText ? this.eyeIcon = "fa-eye" : this.eyeIcon = "fa-sye-slash";
+this.isText ? this.type = "text" : this.type = "password";
+
   }
 }

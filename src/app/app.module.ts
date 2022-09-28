@@ -3,15 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomePageComponent,
     LoginpageComponent,
+    WelcomePageComponent,
+    SignUpPageComponent,
+    SearchPageComponent,
     
   ],
 

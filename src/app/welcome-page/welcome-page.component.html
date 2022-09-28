@@ -1,1 +1,84 @@
-<p>welcome-page works!</p>
+
+<div>
+<nav class="navbar navbar-light bg-light" >
+    <div class="container-fluid" style="background-color:#0dcaf0; line-height: 65px;">
+        <span class="navbar-brand mb-0 h1"><a routerLink="/Home" (click)="clickLogin(true)">Park Away</a></span>
+      <!--<ul class="navbar-nav">-->
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Welcome User
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#" routerLink="/Login" (click)="clickLogin(false)">Login</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="/signuppage" (click)="clickLogin(false)">SignUp</a></li>
+              <li><a class="dropdown-item" href="#">Something</a></li>
+            </ul>
+          </div>
+      
+    </div>
+  </nav>
+  <div style="height: 15px;">
+  </div>
+  <body style="height: 500px;">
+    <div *ngIf="isSearch">
+      <app-search-page></app-search-page>
+
+    </div>
+    <div *ngIf="!isSearch">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </body>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>Park Away
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 12206, US</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold">Park Away</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</div>
