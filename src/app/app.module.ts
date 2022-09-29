@@ -4,10 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { SearchPageComponent } from './search-page/search-page.component';
+import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import '@angular/localize/init';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { SearchPageComponent } from './search-page/search-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    NgbModule,
+    HttpClientModule
   ],
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
